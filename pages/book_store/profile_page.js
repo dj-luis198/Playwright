@@ -1,4 +1,4 @@
-import { waitAndClick } from "../utils/helpers";
+import { waitAndClick } from "../../utils/helpers";
 
 class ProfilePage {
     constructor(page, username) {

@@ -14,6 +14,10 @@ class LoginPage {
         await this.passwordInput.fill(password);
         await this.loginButton.click();
     }
+
+    get errorMessage() {
+        return this.page.getByText('Invalid username or password!');
+    }
 }
 
 export { LoginPage };
