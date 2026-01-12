@@ -1,3 +1,7 @@
+[![Playwright Tests](https://github.com/dj-luis198/Playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/dj-luis198/Playwright/actions/workflows/playwright.yml)
+
+[Ver reporte](https://dj-luis198.github.io/Playwright/)
+
 # 🚀 Proyecto de Automatización con Playwright
 
 Este proyecto establece la **base de pruebas automatizadas** usando [Playwright](https://playwright.dev/) con el patrón **Page Object Model (POM)**, helpers reutilizables y bloqueo de anuncios para mayor estabilidad y velocidad.
