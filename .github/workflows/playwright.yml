@@ -35,7 +35,7 @@ jobs:
 
       # Publicar en gh-pages
       - name: Deploy report to GitHub Pages
-        if: ${{ github.ref == 'refs/heads/main' }} # solo en main
+        if: success() || failure()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
