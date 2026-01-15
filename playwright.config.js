@@ -75,14 +75,24 @@ export default defineConfig({
     },
 
     /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+     {
+      name: 'Mobile Chrome',
+      use: { ...devices['Pixel 5'],
+        env: {
+          TEST_USERNAME: process.env.WEBKIT_USER,
+          TEST_PASSWORD: process.env.WEBKIT_PASS,
+        },
+       },
+     },
+     {
+       name: 'Mobile Safari',
+       use: { ...devices['iPhone 12'],
+        env: {
+          TEST_USERNAME: process.env.WEBKIT_USER,
+          TEST_PASSWORD: process.env.WEBKIT_PASS,
+        },
+        },
+     },
 
     /* Test against branded browsers. */
     // {
