@@ -5,8 +5,8 @@ import { SelectMenuPage } from '../../pages/widgets/select_menu_page.js';
 
 test.describe('Select Menu Widget Tests', () => {
     let selectMenuPage;
-    test.beforeEach(async ({ page }) => {
-        selectMenuPage = new SelectMenuPage(page);
+    test.beforeEach(async ({ page, browserName }) => {
+        selectMenuPage = new SelectMenuPage(page, browserName);
         await selectMenuPage.navigate();
         //await page.pause();
     });

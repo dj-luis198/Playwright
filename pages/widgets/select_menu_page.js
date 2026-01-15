@@ -1,11 +1,12 @@
 class SelectMenuPage {
-    constructor(page) {
+    constructor(page, browserName) {
         this.page = page;
+        this.browserName = browserName;
         this.selectOptions = page.locator('div').filter({ hasText: /^Select Option$/ }).nth(4);
         this.optGroupOption = page.locator('div[class*="singleValue"]');
         this.selectTitle = page.locator('div').filter({ hasText: /^Select Title$/ }).nth(4);
         this.oldSelectMenu = page.locator('#oldSelectMenu');
-        this.multiSelectDropDown = page.locator('div').filter({ hasText: /^Select\.\.\.$/ }).nth(2);
+        this.multiSelectDropDown = page.locator('.css-1wy0on6').nth(2);
         this.multiValueOptiosSelects = page.locator('div[class*="multiValue"]');
         this.standardMultiSelect = page.locator('#cars');
     }
@@ -55,21 +56,26 @@ class SelectMenuPage {
 
 
     async selectMultiOptions(options) {
-        await this.multiSelectDropDown.click();
         for (const text of options) {
+            // Reabrir menú si está cerrado
             const menu = this.page.locator('div.css-11unzgr');
             if (!(await menu.isVisible())) {
-                await this.page.locator('div.css-1wy0on6').click();
+                await this.multiSelectDropDown.click();
+                await menu.waitFor({ state: 'visible' });
             }
 
+            // Seleccionar la opción visible dentro del menú
             const locator = this.page.locator('div.css-11unzgr div', { hasText: text });
-            await locator.waitFor({ state: 'visible' });
             await locator.click();
         }
 
-        // Cerrar el menú si lo necesitás
         await this.page.keyboard.press('Escape');
     }
+
+
+
+
+
 
 
     async getTextOptionsSelected() {
@@ -84,4 +90,4 @@ class SelectMenuPage {
     }
 }
 
-module.exports = { SelectMenuPage };
+export { SelectMenuPage };
