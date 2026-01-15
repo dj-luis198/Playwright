@@ -1,7 +1,6 @@
 class SelectMenuPage {
-    constructor(page, browserName) {
+    constructor(page) {
         this.page = page;
-        this.browserName = browserName;
         this.selectOptions = page.locator('div').filter({ hasText: /^Select Option$/ }).nth(4);
         this.optGroupOption = page.locator('div[class*="singleValue"]');
         this.selectTitle = page.locator('div').filter({ hasText: /^Select Title$/ }).nth(4);
@@ -54,7 +53,6 @@ class SelectMenuPage {
         return shuffled.slice(0, randomCount);
     }
 
-
     async selectMultiOptions(options) {
         for (const text of options) {
             // Reabrir menú si está cerrado
@@ -72,18 +70,9 @@ class SelectMenuPage {
         await this.page.keyboard.press('Escape');
     }
 
-
-
-
-
-
-
     async getTextOptionsSelected() {
         return await this.page.locator('.css-1rhbuit-multiValue .css-12jo7m5').allTextContents();
     }
-
-
-
 
     async selectStandardMultiOptions(option) {
         await this.standardMultiSelect.selectOption(option);

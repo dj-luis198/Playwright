@@ -2,11 +2,10 @@ import { test } from '../setup.js';
 import { expect } from '@playwright/test';
 import { SelectMenuPage } from '../../pages/widgets/select_menu_page.js';
 
-
 test.describe('Select Menu Widget Tests', () => {
     let selectMenuPage;
-    test.beforeEach(async ({ page, browserName }) => {
-        selectMenuPage = new SelectMenuPage(page, browserName);
+    test.beforeEach(async ({ page }) => {
+        selectMenuPage = new SelectMenuPage(page);
         await selectMenuPage.navigate();
         //await page.pause();
     });
@@ -42,8 +41,6 @@ test.describe('Select Menu Widget Tests', () => {
         const selected = await selectMenuPage.getTextOptionsSelected();
         expect(selected).toEqual(selectOptions);
     });
-
-
 
     test('Select multiple options from Standard Multi Select', async () => {
         const options = ['Volvo', 'Saab', 'Opel', 'Audi'];
