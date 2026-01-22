@@ -1,0 +1,26 @@
+{
+        "validUser":{
+            "userName" : "testuser4",
+            "password" : "Test123456!"
+        },
+        "invalidUser":{
+            "userName" : "",
+            "password" : ""
+        },
+        "invalidUser2":{
+            "userName" : "usertest1234",
+            "password" : ""
+        },
+        "invalidUser3":{
+            "userName" : "",
+            "password" : "test1234"
+        },
+        "invalidUser4":{
+            "userName" : "a",
+            "password" : "t"
+        },
+        "invalidUser5":{
+            "userName" : "SaaaaAaaaabcdefghijklmnopqrstuvwxyzzsdefeeeeeeeeeeeeeeeeeeeellfkfkfkfkkf22",
+            "password" : "Aatsjsjsjsjsjsjsjsjsjsjs454545454545454545454545422222222qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq!"
+        }        
+}

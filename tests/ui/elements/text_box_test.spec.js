@@ -1,6 +1,6 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { TextBoxPage } from '../../pages/elements/text_box_page.js';
+import { TextBoxPage } from '../../../pages/elements/text_box_page.js';
 import { faker } from '@faker-js/faker';
 
 test("Text Box Input and Output Verification", async ({ page }) => {

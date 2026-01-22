@@ -1,6 +1,6 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { CheckboxPage } from '../../pages/elements/checkbox_page.js';
+import { CheckboxPage } from '../../../pages/elements/checkbox_page.js';
 
 test.describe('Checkbox Element Tests', () => {
     let checkboxPage;

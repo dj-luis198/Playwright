@@ -1,6 +1,6 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { BrokenPage } from '../../pages/elements/broken_page.js';
+import { BrokenPage } from '../../../pages/elements/broken_page.js';
 
 test.describe('Broken Page tests', () => {
     let brokenPage;

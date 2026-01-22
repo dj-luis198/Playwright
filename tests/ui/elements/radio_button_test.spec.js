@@ -1,6 +1,6 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { RadioButtonPage } from '../../pages/elements/radio_button_page';
+import { RadioButtonPage } from '../../../pages/elements/radio_button_page';
 
 test.describe('Radio Button tests', () => {
     let radioButtonPage;   

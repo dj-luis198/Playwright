@@ -1,6 +1,6 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { WebTablePage } from '../../pages/elements/webtables_page.js';
+import { WebTablePage } from '../../../pages/elements/webtables_page.js';
 import { faker } from '@faker-js/faker';
 
 test.describe('Web Tables tests', () => {

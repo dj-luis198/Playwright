@@ -1,6 +1,6 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { DynamicPropertiesPage } from '../../pages/elements/dynamic_properties_page.js';
+import { DynamicPropertiesPage } from '../../../pages/elements/dynamic_properties_page.js';
 
 test.describe('Dynamic Properties Page tests', () => {
     let dynamicPropertiesPage;

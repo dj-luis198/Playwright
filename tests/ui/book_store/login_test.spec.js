@@ -1,7 +1,7 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { LoginPage } from '../../pages/book_store/login_page';
-import { ProfilePage } from '../../pages/book_store/profile_page';
+import { LoginPage } from '../../../pages/book_store/login_page.js';
+import { ProfilePage } from '../../../pages/book_store/profile_page.js';
 
 test("Successful Login", async ({ page }) => {
     const username = test.info().project.use.env.TEST_USERNAME; 

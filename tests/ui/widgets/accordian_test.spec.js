@@ -1,6 +1,6 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { AccordianPage } from '../../pages/widgets/accordian_page.js';
+import { AccordianPage } from '../../../pages/widgets/accordian_page.js';
 
 test.describe('accordian test', () => {
     let accordianPage;

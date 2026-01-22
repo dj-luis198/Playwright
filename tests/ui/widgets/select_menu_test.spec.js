@@ -1,6 +1,6 @@
-import { test } from '../setup.js';
+import { test } from '../../setup.js';
 import { expect } from '@playwright/test';
-import { SelectMenuPage } from '../../pages/widgets/select_menu_page.js';
+import { SelectMenuPage } from '../../../pages/widgets/select_menu_page.js';
 
 test.describe('Select Menu Widget Tests', () => {
     let selectMenuPage;
